@@ -203,4 +203,4 @@ class MetierSpider(scrapy.Spider):
         formations=response.xpath('//*[@id="collapseFormations"]/div/text()').get().split('\n')    
         formations=[f.strip() for f in formations if len(f.strip())>0] 
         titre=response.xpath('//*[@id="block-opiiecgpec-page-title"]/h1/text()').get()
-        return {'titre':titre,'formations':formations, 'experience':experience,'offres':offres,'competences':competences,'famille':famille, 'activitesprincipales':activitesprincipales,'tailleentreprisesquirecrutent':tailleentreprisesquirecrutent,'metiersproches':metiersproches}
+        return {'certifications':certifications,'titre':titre,'formations':formations, 'experience':experience,'offres':offres,'competences':competences,'famille':famille, 'activitesprincipales':activitesprincipales,'tailleentreprisesquirecrutent':tailleentreprisesquirecrutent,'metiersproches':metiersproches}
